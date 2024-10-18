@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f8e1; /* Light yellow background */
+    color: #6b4f4f; /* Dark brown for text */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffeb99; /* Corn yellow */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #4d4d00; /* Dark olive green */
+}
+
+input[type="text"],
+input[type="textarea"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d1c3a5; /* Light brown border */
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+button {
+    background-color: #b2d87b; /* Light green button */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #92c967; /* Darker green on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+#escalations-list div {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff3e6; /* Light peach */
+    border: 1px solid #d1c3a5; /* Light brown border */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#escalations-list div:hover {
+    background-color: #ffe6cc; /* Slightly darker peach on hover */
+}
+
+#previous-notes {
+    margin-top: 20px;
+}
+
+#notes-list div {
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #e6e6e6; /* Light gray for notes */
+    border-radius: 5px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker de Escalaciones de Soporte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>UEX Escalation tracker</h1>
+        <h1>Cornsearch</h1>
+
+        <div id="user-selection">
+            <h2>Ingresa tu nombre de usuario</h2>
+            <input type="text" id="username" placeholder="Nombre de usuario">
+            <button id="loginButton">Ingresar</button>
+            <p id="error-message" style="color: red;"></p>
+        </div>
+
+        <button id="testAlertButton" class="test-alert-button" onclick="testIdleAlert()" style="display: none;">Probar Alerta</button>
+
+        <div id="escalations-section" class="hidden">
+            <button onclick="newEscalation()">Nueva Escalación</button>
+            <input type="text" id="searchCaseNumber" placeholder="Buscar por número de caso">
+            <button onclick="searchEscalation()">Buscar</button>
+            <div id="escalations-list"></div>
+        </div>
+
+        <div id="escalation-details" class="hidden">
+            <h2>Detalles de la Escalación</h2>
+            <form id="escalation-form">
+                <label for="caseNumber">Número de Caso:</label>
+                <input type="text" id="caseNumber">
+                
+                <label for="chatName">Referencia:</label>
+                <input type="text" id="chatName">
+                
+                <label for="escalatedBy">Escalado por:</label>
+                <input type="text" id="escalatedBy" readonly>
+                
+                <label for="description">Descripción:</label>
+                <input type="text" id="description">
+                
+                <label for="mco">MCO:</label>
+                <input type="text" id="mco">
+                
+                <label for="csamIM">CSAM-IM:</label>
+                <input type="text" id="csamIM">
+                
+                <label for="status">Estado:</label>
+                <select id="status">
+                    <option value="ongoing">Ongoing</option>
+                    <option value="de-escalated">De-escalated</option>
+                    <option value="idle">Idle</option>
+                    <option value="closed">Closed</option>
+                </select>
+                
+                <label for="notes">Notas:</label>
+                <textarea id="notes"></textarea>
+                
+                <button type="button" onclick="saveEscalation()">Guardar Cambios</button>
+                <button type="button" onclick="deleteEscalation()">Eliminar Escalación</button>
+                <button type="button" id="displayNotesButton" onclick="displayPreviousNotes()">Mostrar Notas Anteriores</button>
+
+                <div id="previous-notes" class="hidden">
+                    <h3>Notas Anteriores</h3>
+                    <div id="notes-list"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
